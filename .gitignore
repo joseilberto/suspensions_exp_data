@@ -6,3 +6,4 @@
 data/*
 plots/*
 .Rproj.user
+*.Rhistory
