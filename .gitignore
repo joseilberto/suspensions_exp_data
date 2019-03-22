@@ -5,3 +5,4 @@
 *.npy
 data/*
 plots/*
+.Rproj.user
