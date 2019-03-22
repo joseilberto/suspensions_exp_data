@@ -7,8 +7,10 @@ check_dependencies = function(){
 }
 
 check_install_dependency = function(dependency){
-  if (!require(dependency, character.only = TRUE)){
-    install.packages(x, dep = TRUE)
-    if (!require(dependency, character.only = TRUE)) stop("Package not found")
+  if (!require(dependency, character.only = TRUE, quietly = TRUE)){
+    install.packages(x, dependencies = TRUE)
+    if (!require(dependency, character.only = TRUE, quietly = TRUE)){
+      stop("Package not found")
+    } 
   }
 }
